@@ -1,4 +1,3 @@
-import '@fortawesome/fontawesome-pro/css/all.min.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import GlobalConstant from '@/constants/GlobalConstant'
