@@ -16,8 +16,6 @@ const ConceptItem = ({ title, children, theme, backgroundImage }: Props) => {
   const control = useAnimation();
   const [ref, isInView] = useInView();
 
-  const wrapperClasses = 'mx-auto max-w-screen-2xl p-8 lg:p-16 flex flex-1 flex-col items-center' + theme === 'dark' ? ' bg-main-dark text-gold' : ''
-
   const inViewBgVariants = {
     visible: {
       opacity: 1,
@@ -58,7 +56,7 @@ const ConceptItem = ({ title, children, theme, backgroundImage }: Props) => {
     const charMap = l.split('');
 
     return (
-      <p className='my-2 lg:my-4 text-xs lg:text-base  text-white'>
+      <p className='my-2 lg:my-4 text-xs lg:text-base  text-white' key={l}>
         {charMap.map(c => {
           const inViewTextVariables = {
             visible: {

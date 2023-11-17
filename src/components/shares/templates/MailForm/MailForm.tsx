@@ -16,7 +16,7 @@ type FormValues = {
 
 
 const MailForm = () => {
-  const formStyle = "w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring";
+  const formStyle = "w-full rounded border bg-gray-50 p-1 lg:px-3 lg:py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring";
   const mailValidate = {
     value: /^[a-zA-Z0-9_+-]+(.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/,
     message: 'メールアドレスの入力に誤りがあります。'
@@ -61,7 +61,7 @@ const MailForm = () => {
 
   return (
 
-    <form className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2" onSubmit={onSubmit}>
+    <form className="mx-auto grid max-w-screen-md gap-4 text-base lg:text-base sm:grid-cols-2" onSubmit={onSubmit}>
       <div>
         <label htmlFor="firstName" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">姓*</label>
         <input
@@ -79,7 +79,7 @@ const MailForm = () => {
       </div>
 
       <div>
-        <label htmlFor="lastName" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">名*</label>
+        <label htmlFor="lastName" className="mb-1 inline-block text-xs lg:text-sm text-gray-800 sm:text-base">名*</label>
         <input
           type='text'
           id="lastName"
@@ -94,7 +94,7 @@ const MailForm = () => {
       </div>
 
       <div className="sm:col-span-2">
-        <label htmlFor="email" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Email*</label>
+        <label htmlFor="email" className="mb-1 inline-block text-sm text-gray-800 sm:text-base">Email*</label>
         <input
           id="email"
           className={formStyle}
@@ -107,7 +107,7 @@ const MailForm = () => {
       </div>
 
       <div className="sm:col-span-2">
-        <label htmlFor="tel" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">電話番号*</label>
+        <label htmlFor="tel" className="mb-1 inline-block text-sm text-gray-800 sm:text-base">電話番号*</label>
         <input
           type='tel'
           id="tel"
@@ -122,7 +122,7 @@ const MailForm = () => {
       </div>
 
       <div className="sm:col-span-2">
-        <label htmlFor="message" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">メッセージ*</label>
+        <label htmlFor="message" className="mb-1 inline-block text-sm text-gray-800 sm:text-base">メッセージ*</label>
         <textarea id="message" className={"h-64 " + formStyle} {...register('message', { required: 'メッセージを入力してください', pattern: /[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠]+/ })}></textarea>
         {errors.message && (<ErrorField>{errors.message.message}</ErrorField>)}
       </div>

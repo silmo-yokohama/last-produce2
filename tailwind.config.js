@@ -31,13 +31,18 @@ module.exports = {
       textColor: theme => ({
         'gold': 'rgb(223,194,86)'
       }),
-      backgroundImage: theme => ({
-        'main-bg': "url('/public/images/background.png)"
+      borderColor: theme => ({
+        'gold': 'rgb(223,194,86)'
       }),
       backgroundColor: theme => ({
         'main-btn': '#FACC14',
         'main-dark': '#1F2937',
-        'main': '#FFFBEB'
+        'main': '#FFFBEB',
+        'gold': 'rgb(223,194,86)',
+        'light-gold': 'rgba(223,194,86, 0.2)',
+      }),
+      borderColor: theme => ({
+        'light-gold': 'rgb(255,251,236)'
       })
     },
   },

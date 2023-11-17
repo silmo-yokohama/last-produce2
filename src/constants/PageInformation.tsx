@@ -19,9 +19,9 @@ export const ServicePage: PageInformation = {
 }
 
 export const CorporatePage: PageInformation = {
-  url: '/corporate',
+  url: '/company',
   pageName: '会社概要',
-  pageDescription: 'Corporate'
+  pageDescription: 'Company'
 }
 
 export const ContactPage: PageInformation = {

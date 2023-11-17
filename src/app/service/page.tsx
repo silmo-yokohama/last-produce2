@@ -44,7 +44,7 @@ const page = () => {
           </div>
 
 
-          <div className="w-full flex flex-1 flex-wrap">
+          <div className="w-full flex flex-1 flex-wrap justify-center">
 
             {
               HallDetailsConstant && HallDetailsConstant.map(

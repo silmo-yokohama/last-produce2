@@ -28,6 +28,10 @@
     .marker-yellow {
       background: linear-gradient(transparent 65%, rgba(250,204,20,.5) 35%);
     }
+
+    .h-1px {
+      height: 1px;
+    }
   }
 
 }

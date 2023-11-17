@@ -4,6 +4,7 @@ import React from 'react'
 import { usePathname } from 'next/navigation'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { AnimatePresence, motion } from 'framer-motion';
+import { LoadScript } from '@react-google-maps/api';
 
 
 const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
@@ -12,15 +13,16 @@ const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
 
   const initStyle = {
     opacity: 0,
-    marginTop: "2rem"
+    y: 20
   };
   const visibleStyle = {
     opacity: 1,
-    marginTop: 0
+    y: 0
   };
 
   return (
     <GoogleReCaptchaProvider reCaptchaKey={siteKey} language='ja'>
+
       <AnimatePresence mode="wait">
         <motion.div
           key={pathName}
